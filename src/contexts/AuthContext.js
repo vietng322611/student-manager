@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import emailjs from '@emailjs/browser';
-import {users} from '../data'
+import {users, email} from '../data'
 
 const authContext = React.createContext();
 
@@ -30,13 +30,13 @@ export default function AuthProvider({children}) {
     if (!foundUser.length)
       throw new Error('Username does not exist!')
     emailjs.send(
-      'service_b8ilr8k',
-      'template_kd4ebqa',
+      email.serviceId,
+      email.templateId,
       {
         username: username,
         email: foundUser[0].email
       },
-      '5jxfG16pguIxv4cz8'
+      email.publicKey
     )
       .then(() => (error) => {throw new Error(error.text)})
   }

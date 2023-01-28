@@ -1,7 +1,12 @@
-export const users = [
+const users = [
     {
-        username : "murasaki",
-        email : "vietng322611@gmail.com",
+        username : "test",
+        email : "test@gmail.com",
         password : "123456"
     }
 ];
+const email = {
+    serviceId : '',
+    templateId : '',
+    publicKey : ''
+}
