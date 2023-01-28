@@ -10,3 +10,7 @@ const email = {
     templateId : '',
     publicKey : ''
 }
+export {
+    users,
+    email
+}
